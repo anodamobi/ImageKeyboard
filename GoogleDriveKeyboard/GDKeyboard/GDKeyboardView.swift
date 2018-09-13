@@ -17,7 +17,7 @@ class GDKeyboardView: UIView {
         return layout
     }
     
-    private let searchField = KeyboardSearchField()
+    private let searchFieldView = KeyboardSearchField()
     private let controller: GDKeyboardCollectionController
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
     
@@ -35,8 +35,8 @@ class GDKeyboardView: UIView {
     private func configureUI() {
         backgroundColor = .clear
         
-        addSubview(searchField)
-        searchField.snp.makeConstraints {
+        addSubview(searchFieldView)
+        searchFieldView.snp.makeConstraints {
             $0.left.top.right.equalToSuperview()
             $0.height.equalTo(54)
         }
@@ -44,7 +44,7 @@ class GDKeyboardView: UIView {
         addSubview(collectionView)
         collectionView.backgroundColor = .white
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(searchField.snp.bottom)
+            $0.top.equalTo(searchFieldView.snp.bottom)
             $0.left.right.bottom.equalToSuperview()
         }
     }
@@ -59,5 +59,7 @@ class GDKeyboardView: UIView {
         controller.storage.update {
             $0.add(models)
         }
+        
+        controller.attachSearchBar(searchFieldView.searchField)
     }
 }

@@ -10,10 +10,10 @@ import UIKit
 
 class KeyboardSearchField: UIView {
     
-    private let textField = UITextField()
+    private let searchBar = UISearchBar()
     
-    var inputField: UITextField {
-        return textField
+    var searchField: UISearchBar {
+        return searchBar
     }
     
     init() {
@@ -28,15 +28,11 @@ class KeyboardSearchField: UIView {
     private func configureUI() {
         backgroundColor = UIColor.gdkBlue
         
-        addSubview(textField)
-        textField.backgroundColor = UIColor.gdkLightBlue
-        textField.font = UIFont.boldSystemFont(ofSize: 18)
-        textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(string:"Search Item",
-                                                            attributes: [.foregroundColor: UIColor.white])
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: 0))
-        textField.leftViewMode = .always
-        textField.snp.makeConstraints {
+        addSubview(searchBar)
+        searchBar.barTintColor = .white
+        searchBar.backgroundColor = .white
+        searchField.placeholder = "Search Item"
+        searchBar.snp.makeConstraints {
             $0.left.equalToSuperview().offset(8)
             $0.top.equalToSuperview().offset(8)
             $0.bottom.equalToSuperview().offset(-8)
