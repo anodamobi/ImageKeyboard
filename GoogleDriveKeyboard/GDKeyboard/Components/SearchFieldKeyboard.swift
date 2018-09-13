@@ -18,6 +18,8 @@ protocol SearchFieldKeyboardDelegate: class {
 // This keyboard is being used to input text into GDKeyboard's search field
 class SearchFieldKeyboard: UIView {
     
+    private var keyboardButtons: [UIButton] = []
+    
     private let firstRowButtonTitles = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
     private let secondRowButtonTitles = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
     private let thirdRowButtonTitles = ["Z", "X", "C", "V", "B", "N", "M"]
@@ -65,10 +67,33 @@ class SearchFieldKeyboard: UIView {
         mainStackView.addArrangedSubview(thirdRowStack)
         mainStackView.addArrangedSubview(forthRowStack)
         
-        buttons(row: 0).forEach { firstRowStack.addArrangedSubview($0) }
-        buttons(row: 1).forEach { secondRowStack.addArrangedSubview($0) }
-        buttons(row: 2).forEach { thirdRowStack.addArrangedSubview($0) }
-        buttons(row: 3).forEach { forthRowStack.addArrangedSubview($0) }
+        var kbButtons: [UIButton] = []
+        
+        kbButtons = buttons(row: 0)
+        kbButtons.forEach { firstRowStack.addArrangedSubview($0) }
+        keyboardButtons.append(contentsOf: kbButtons)
+        
+        kbButtons = buttons(row: 1)
+        kbButtons.forEach { secondRowStack.addArrangedSubview($0) }
+        keyboardButtons.append(contentsOf: kbButtons)
+        
+        kbButtons = buttons(row: 2)
+        kbButtons.forEach { thirdRowStack.addArrangedSubview($0) }
+        keyboardButtons.append(contentsOf: kbButtons)
+        
+        kbButtons = buttons(row: 3)
+        kbButtons.forEach { forthRowStack.addArrangedSubview($0) }
+        keyboardButtons.append(contentsOf: kbButtons)
+    }
+    
+    func updateColors(colorScheme: KeyboardColorScheme) {
+        let colors = KeyboardColors(colorScheme: colorScheme)
+        
+        keyboardButtons.forEach {
+            $0.setBackgroundColor(color: colors.buttonBackgroundColor, forState: .normal)
+            $0.setBackgroundColor(color: colors.buttonHighlightColor, forState: .selected)
+            $0.setTitleColor(colors.buttonTextColor, for: .normal)
+        }
     }
     
     private func buttons(row: Int) -> [UIButton] {
@@ -95,9 +120,6 @@ class SearchFieldKeyboard: UIView {
     private func keyboardButton(title: String) -> UIButton {
         let button = UIButton(type: .custom)
         button.setTitle(title, for: .normal)
-        button.setBackgroundColor(color: .white, forState: .normal)
-        button.setBackgroundColor(color: .lightGray, forState: .selected)
-        button.setTitleColor(.darkGray, for: .normal)
         button.addTarget(self, action: #selector(handleButtonPress(button:)), for: .touchUpInside)
         return button
     }

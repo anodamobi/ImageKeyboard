@@ -26,6 +26,7 @@ class KeyboardPracticeVC: UIViewController {
             $0.width.equalTo(200)
         }
         
+        gdkView.updateColorScheme(scheme: .light)
         let container = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 290))
         container.addSubview(gdkView)
         gdkView.snp.makeConstraints { $0.edges.equalToSuperview() }

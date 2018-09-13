@@ -83,15 +83,15 @@ class GDKeyboardView: UIView {
         controller.attachSearchBar(searchFieldView.searchField)
         searchFieldView.delegate = self
     }
+    
+    func updateColorScheme(scheme: KeyboardColorScheme) {
+        searchFieldKeyboard.updateColors(colorScheme: scheme)
+    }
 }
 
 extension GDKeyboardView: SearchFieldViewDelegate {
     func didBeginEditing() {
         isInternalKeyboardHidded = false
-    }
-    
-    func didEndEditing() {
-//        isInternalKeyboardHidded = true
     }
 }
 

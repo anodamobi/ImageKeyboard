@@ -12,9 +12,16 @@ protocol SearchFieldViewDelegate: class {
     func didBeginEditing()
 }
 
+class CancelButtonFreeSearchBar: UISearchBar {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setShowsCancelButton(false, animated: false)
+    }
+}
+
 class SearchFieldView: UIView {
     
-    private let searchBar = UISearchBar()
+    private let searchBar = CancelButtonFreeSearchBar()
     weak var delegate: SearchFieldViewDelegate?
     
     var searchField: UISearchBar {
@@ -38,6 +45,7 @@ class SearchFieldView: UIView {
         backgroundColor = UIColor.gdkBlue
         
         textField?.addTarget(self, action: #selector(editingBegin), for: .editingDidBegin)
+        textField?.clearButtonMode = .never
         
         addSubview(searchBar)
         searchBar.barTintColor = .white

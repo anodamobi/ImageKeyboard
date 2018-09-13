@@ -35,14 +35,15 @@ class KeyboardViewController: UIInputViewController {
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
-//        var textColor: UIColor
-//        let proxy = self.textDocumentProxy
-//        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-//            textColor = UIColor.white
-//        } else {
-//            textColor = UIColor.black
-//        }
-//        self.nextKeyboardButton.setTitleColor(textColor, for: [])
+        let colorScheme: KeyboardColorScheme
+        
+        if textDocumentProxy.keyboardAppearance == .dark {
+            colorScheme = .dark
+        } else {
+            colorScheme = .light
+        }
+        
+        keyboardView.updateColorScheme(scheme: colorScheme)
     }
 }
 

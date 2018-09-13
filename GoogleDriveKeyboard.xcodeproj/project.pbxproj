@@ -32,6 +32,8 @@
 		D4ACD69E214964A600489C04 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD69D214964A600489C04 /* UIColor+Ext.swift */; };
 		D4ACD6A121496CD300489C04 /* TestDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */; };
 		D4ACD6A321496E7400489C04 /* GDKeyboardCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */; };
+		D4ED875D214A8A1D002685B3 /* KeyboardColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */; };
+		D4ED875E214A8BC2002685B3 /* KeyboardColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		D4ACD69D214964A600489C04 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataGenerator.swift; sourceTree = "<group>"; };
 		D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDKeyboardCollectionController.swift; sourceTree = "<group>"; };
+		D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardColors.swift; sourceTree = "<group>"; };
 		D6E27CB2D1DCC0516D44B6F7 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81A35FE0499834B8149B02D /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,7 @@
 		D4ACD69421495F6600489C04 /* GDKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D4ED875B214A8A0C002685B3 /* Colors */,
 				D4ACD699214962DC00489C04 /* Components */,
 				D4ACD69521495F7C00489C04 /* GDKeyboardView.swift */,
 			);
@@ -218,6 +222,14 @@
 				D4ACD68C21495F0000489C04 /* Info.plist */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		D4ED875B214A8A0C002685B3 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +406,7 @@
 				D4317B29214A74A000F274F2 /* ColorTheme+Ext.swift in Sources */,
 				D4317B22214A584100F274F2 /* GDKeyboardCollectionController.swift in Sources */,
 				D4317B21214A584100F274F2 /* SearchFieldView.swift in Sources */,
+				D4ED875E214A8BC2002685B3 /* KeyboardColors.swift in Sources */,
 				D4317B2A214A770B00F274F2 /* SearchFieldKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4ACD69B214962F700489C04 /* SearchFieldView.swift in Sources */,
+				D4ED875D214A8A1D002685B3 /* KeyboardColors.swift in Sources */,
 				D4ACD69621495F7C00489C04 /* GDKeyboardView.swift in Sources */,
 				D4ACD698214960C300489C04 /* KeyboardItemCell.swift in Sources */,
 				D4ACD6A321496E7400489C04 /* GDKeyboardCollectionController.swift in Sources */,
