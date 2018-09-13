@@ -8,12 +8,21 @@
 
 import UIKit
 
-class KeyboardSearchField: UIView {
+protocol SearchFieldViewDelegate: class {
+    func didBeginEditing()
+}
+
+class SearchFieldView: UIView {
     
     private let searchBar = UISearchBar()
+    weak var delegate: SearchFieldViewDelegate?
     
     var searchField: UISearchBar {
         return searchBar
+    }
+    
+    var textField: UITextField? {
+        return searchBar.value(forKey: "searchField") as? UITextField
     }
     
     init() {
@@ -28,8 +37,11 @@ class KeyboardSearchField: UIView {
     private func configureUI() {
         backgroundColor = UIColor.gdkBlue
         
+        textField?.addTarget(self, action: #selector(editingBegin), for: .editingDidBegin)
+        
         addSubview(searchBar)
         searchBar.barTintColor = .white
+        searchBar.showsCancelButton = true
         searchBar.backgroundColor = .white
         searchField.placeholder = "Search Item"
         searchBar.snp.makeConstraints {
@@ -38,5 +50,10 @@ class KeyboardSearchField: UIView {
             $0.bottom.equalToSuperview().offset(-8)
             $0.right.equalToSuperview().offset(-8)
         }
+    }
+    
+    @objc
+    private func editingBegin() {
+        delegate?.didBeginEditing()
     }
 }

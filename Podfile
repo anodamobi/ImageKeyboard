@@ -8,6 +8,7 @@ abstract_target 'GoogleDriveKeyboardAbstract' do
         pod 'SnapKit'
         pod 'AlisterSwift', :git => 'https://github.com/anodamobi/AlisterSwift.git', :branch => 'develop', :commit => 'ff395f6'
         pod 'Kingfisher'
+        pod 'Reveal-SDK'
     end
     
     target 'KeyboardViewController' do

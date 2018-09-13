@@ -12,6 +12,7 @@ class KeyboardPracticeVC: UIViewController {
     
     private let textField = UITextField()
     private let gdkView = GDKeyboardView()
+    private let keyboardView = SearchFieldKeyboard()
     
     override func viewDidLoad() {
         view.backgroundColor = .white
@@ -28,6 +29,13 @@ class KeyboardPracticeVC: UIViewController {
         let container = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 290))
         container.addSubview(gdkView)
         gdkView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        gdkView.delegate = self
         textField.inputView = container
+    }
+}
+
+extension KeyboardPracticeVC: GDKeyboardViewDelegate {
+    func didSelectItem(image: UIImage) {
+        
     }
 }

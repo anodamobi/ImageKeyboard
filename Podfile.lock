@@ -1,16 +1,19 @@
 PODS:
   - AlisterSwift (0.1.0)
   - Kingfisher (4.8.1)
+  - Reveal-SDK (17)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - AlisterSwift (from `https://github.com/anodamobi/AlisterSwift.git`, commit `ff395f6`, branch `develop`)
   - Kingfisher
+  - Reveal-SDK
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
+    - Reveal-SDK
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -27,8 +30,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AlisterSwift: 1d599f2c05943f9b576b9c741c9aae311cd41fe7
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  Reveal-SDK: a6df49f47319bd19a110c960c498af32df72c0af
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 16c21168549fd2a437088e2264dcc7905525f6ee
+PODFILE CHECKSUM: 7b29d15754e5708716e702d6c6b0bc7ff0ec6d2c
 
 COCOAPODS: 1.5.3

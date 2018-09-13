@@ -21,11 +21,19 @@ class GDKeyboardView: UIView {
         return layout
     }
     
-    private let searchFieldView = KeyboardSearchField()
+    private let searchFieldView = SearchFieldView()
+    private let searchFieldKeyboard = SearchFieldKeyboard()
     private let controller: GDKeyboardCollectionController
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
     
     weak var delegate: GDKeyboardViewDelegate?
+    
+    var isInternalKeyboardHidded: Bool = false {
+        didSet {
+            searchFieldKeyboard.isHidden = isInternalKeyboardHidded
+            searchFieldKeyboard.isUserInteractionEnabled = !isInternalKeyboardHidded
+        }
+    }
     
     init() {
         controller = GDKeyboardCollectionController(collectionView: collectionView)
@@ -54,6 +62,11 @@ class GDKeyboardView: UIView {
             $0.left.right.bottom.equalToSuperview()
             $0.height.equalTo(236)
         }
+        
+        isInternalKeyboardHidded = true
+        addSubview(searchFieldKeyboard)
+        searchFieldKeyboard.delegate = self
+        searchFieldKeyboard.snp.makeConstraints { $0.edges.equalTo(collectionView) }
     }
     
     private func configureAlister() {
@@ -68,5 +81,35 @@ class GDKeyboardView: UIView {
         }
         
         controller.attachSearchBar(searchFieldView.searchField)
+        searchFieldView.delegate = self
+    }
+}
+
+extension GDKeyboardView: SearchFieldViewDelegate {
+    func didBeginEditing() {
+        isInternalKeyboardHidded = false
+    }
+    
+    func didEndEditing() {
+//        isInternalKeyboardHidded = true
+    }
+}
+
+extension GDKeyboardView: SearchFieldKeyboardDelegate {
+    
+    func didSelectCharacter(character: String) {
+        searchFieldView.textField?.insertText(character)
+    }
+
+    func didSelectSpace() {
+        searchFieldView.textField?.insertText(" ")
+    }
+    
+    func didSelectDelete() {
+        searchFieldView.textField?.deleteBackward()
+    }
+    
+    func didSelectClose() {
+        isInternalKeyboardHidded = true
     }
 }
