@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4666E6E422D7DA1F5D64F685 /* Pods_GoogleDriveKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */; };
+		D4ACD68121495F0000489C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD68021495F0000489C04 /* AppDelegate.swift */; };
+		D4ACD68821495F0000489C04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ACD68721495F0000489C04 /* Assets.xcassets */; };
+		D4ACD68B21495F0000489C04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ACD68921495F0000489C04 /* LaunchScreen.storyboard */; };
+		D4ACD69321495F3900489C04 /* KeyboardPractiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD69221495F3900489C04 /* KeyboardPractiveVC.swift */; };
+		D4ACD69621495F7C00489C04 /* GDKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD69521495F7C00489C04 /* GDKeyboardView.swift */; };
+		D4ACD698214960C300489C04 /* KeyboardItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD697214960C300489C04 /* KeyboardItemCell.swift */; };
+		D4ACD69B214962F700489C04 /* KeyboardSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD69A214962F700489C04 /* KeyboardSearchField.swift */; };
+		D4ACD69E214964A600489C04 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD69D214964A600489C04 /* UIColor+Ext.swift */; };
+		D4ACD6A121496CD300489C04 /* TestDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */; };
+		D4ACD6A321496E7400489C04 /* GDKeyboardCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01CF29044533150C283FA124 /* Pods-GoogleDriveKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboard/Pods-GoogleDriveKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		549F089D2653071A4416750D /* Pods-GoogleDriveKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboard/Pods-GoogleDriveKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		D4ACD67D21495F0000489C04 /* GoogleDriveKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleDriveKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4ACD68021495F0000489C04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4ACD68721495F0000489C04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4ACD68A21495F0000489C04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4ACD68C21495F0000489C04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4ACD69221495F3900489C04 /* KeyboardPractiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPractiveVC.swift; sourceTree = "<group>"; };
+		D4ACD69521495F7C00489C04 /* GDKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDKeyboardView.swift; sourceTree = "<group>"; };
+		D4ACD697214960C300489C04 /* KeyboardItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardItemCell.swift; sourceTree = "<group>"; };
+		D4ACD69A214962F700489C04 /* KeyboardSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSearchField.swift; sourceTree = "<group>"; };
+		D4ACD69D214964A600489C04 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataGenerator.swift; sourceTree = "<group>"; };
+		D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDKeyboardCollectionController.swift; sourceTree = "<group>"; };
+		FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4ACD67A21495F0000489C04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4666E6E422D7DA1F5D64F685 /* Pods_GoogleDriveKeyboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0015A8EA25492DA723A97AC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24D6B91AAF6A7DF27E0C8C15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01CF29044533150C283FA124 /* Pods-GoogleDriveKeyboard.debug.xcconfig */,
+				549F089D2653071A4416750D /* Pods-GoogleDriveKeyboard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4ACD67421495F0000489C04 = {
+			isa = PBXGroup;
+			children = (
+				D4ACD67F21495F0000489C04 /* GoogleDriveKeyboard */,
+				D4ACD67E21495F0000489C04 /* Products */,
+				24D6B91AAF6A7DF27E0C8C15 /* Pods */,
+				0015A8EA25492DA723A97AC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4ACD67E21495F0000489C04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD67D21495F0000489C04 /* GoogleDriveKeyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4ACD67F21495F0000489C04 /* GoogleDriveKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD6A42149728300489C04 /* Application */,
+				D4ACD69F21496CC900489C04 /* Services */,
+				D4ACD69C2149649B00489C04 /* Extensions */,
+				D4ACD69421495F6600489C04 /* GDKeyboard */,
+				D4ACD69221495F3900489C04 /* KeyboardPractiveVC.swift */,
+			);
+			path = GoogleDriveKeyboard;
+			sourceTree = "<group>";
+		};
+		D4ACD69421495F6600489C04 /* GDKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD699214962DC00489C04 /* Components */,
+				D4ACD69521495F7C00489C04 /* GDKeyboardView.swift */,
+			);
+			path = GDKeyboard;
+			sourceTree = "<group>";
+		};
+		D4ACD699214962DC00489C04 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD697214960C300489C04 /* KeyboardItemCell.swift */,
+				D4ACD69A214962F700489C04 /* KeyboardSearchField.swift */,
+				D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D4ACD69C2149649B00489C04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD69D214964A600489C04 /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4ACD69F21496CC900489C04 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D4ACD6A42149728300489C04 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACD68021495F0000489C04 /* AppDelegate.swift */,
+				D4ACD68721495F0000489C04 /* Assets.xcassets */,
+				D4ACD68921495F0000489C04 /* LaunchScreen.storyboard */,
+				D4ACD68C21495F0000489C04 /* Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4ACD67C21495F0000489C04 /* GoogleDriveKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4ACD68F21495F0000489C04 /* Build configuration list for PBXNativeTarget "GoogleDriveKeyboard" */;
+			buildPhases = (
+				6BA3217EAD456BCA15EDB787 /* [CP] Check Pods Manifest.lock */,
+				D4ACD67921495F0000489C04 /* Sources */,
+				D4ACD67A21495F0000489C04 /* Frameworks */,
+				D4ACD67B21495F0000489C04 /* Resources */,
+				E8C8B7E090ECC3F41FF9053F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleDriveKeyboard;
+			productName = GoogleDriveKeyboard;
+			productReference = D4ACD67D21495F0000489C04 /* GoogleDriveKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4ACD67521495F0000489C04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = ANODA;
+				TargetAttributes = {
+					D4ACD67C21495F0000489C04 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D4ACD67821495F0000489C04 /* Build configuration list for PBXProject "GoogleDriveKeyboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4ACD67421495F0000489C04;
+			productRefGroup = D4ACD67E21495F0000489C04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4ACD67C21495F0000489C04 /* GoogleDriveKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4ACD67B21495F0000489C04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4ACD68B21495F0000489C04 /* LaunchScreen.storyboard in Resources */,
+				D4ACD68821495F0000489C04 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BA3217EAD456BCA15EDB787 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleDriveKeyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8C8B7E090ECC3F41FF9053F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveKeyboard/Pods-GoogleDriveKeyboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AlisterSwift/AlisterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlisterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveKeyboard/Pods-GoogleDriveKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4ACD67921495F0000489C04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4ACD69B214962F700489C04 /* KeyboardSearchField.swift in Sources */,
+				D4ACD69621495F7C00489C04 /* GDKeyboardView.swift in Sources */,
+				D4ACD698214960C300489C04 /* KeyboardItemCell.swift in Sources */,
+				D4ACD6A321496E7400489C04 /* GDKeyboardCollectionController.swift in Sources */,
+				D4ACD6A121496CD300489C04 /* TestDataGenerator.swift in Sources */,
+				D4ACD69E214964A600489C04 /* UIColor+Ext.swift in Sources */,
+				D4ACD68121495F0000489C04 /* AppDelegate.swift in Sources */,
+				D4ACD69321495F3900489C04 /* KeyboardPractiveVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4ACD68921495F0000489C04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4ACD68A21495F0000489C04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4ACD68D21495F0000489C04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4ACD68E21495F0000489C04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4ACD69021495F0000489C04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01CF29044533150C283FA124 /* Pods-GoogleDriveKeyboard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VYW9J77NX;
+				INFOPLIST_FILE = GoogleDriveKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4ACD69121495F0000489C04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 549F089D2653071A4416750D /* Pods-GoogleDriveKeyboard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VYW9J77NX;
+				INFOPLIST_FILE = GoogleDriveKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4ACD67821495F0000489C04 /* Build configuration list for PBXProject "GoogleDriveKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4ACD68D21495F0000489C04 /* Debug */,
+				D4ACD68E21495F0000489C04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4ACD68F21495F0000489C04 /* Build configuration list for PBXNativeTarget "GoogleDriveKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4ACD69021495F0000489C04 /* Debug */,
+				D4ACD69121495F0000489C04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4ACD67521495F0000489C04 /* Project object */;
+}

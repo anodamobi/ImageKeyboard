@@ -1,0 +1,34 @@
+PODS:
+  - AlisterSwift (0.1.0)
+  - Kingfisher (4.8.1)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - AlisterSwift (from `https://github.com/anodamobi/AlisterSwift.git`, commit `ff395f6`, branch `develop`)
+  - Kingfisher
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - SnapKit
+
+EXTERNAL SOURCES:
+  AlisterSwift:
+    :branch: develop
+    :commit: ff395f6
+    :git: https://github.com/anodamobi/AlisterSwift.git
+
+CHECKOUT OPTIONS:
+  AlisterSwift:
+    :commit: ff395f64feccfd30e06e9616899a9557e7dd6a30
+    :git: https://github.com/anodamobi/AlisterSwift.git
+
+SPEC CHECKSUMS:
+  AlisterSwift: 1d599f2c05943f9b576b9c741c9aae311cd41fe7
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: bd10764f38e7a113a2a3959d2442c1aeb29e81bc
+
+COCOAPODS: 1.5.3
