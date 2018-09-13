@@ -32,6 +32,8 @@ class KeyboardItemCell: UICollectionViewCell, ReusableViewInterface {
     private let contentImageView = UIImageView()
     private let nameLabel = UILabel()
     
+    let generator = UIImpactFeedbackGenerator()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -42,6 +44,11 @@ class KeyboardItemCell: UICollectionViewCell, ReusableViewInterface {
     }
     
     private func configureUI() {
+        let tapGR = UITapGestureRecognizer(target: self,
+                                           action: #selector(copyItem))
+        tapGR.numberOfTapsRequired = 2
+        addGestureRecognizer(tapGR)
+        
         contentView.addSubview(contentImageView)
         contentImageView.clipsToBounds = true
         contentImageView.layer.cornerRadius = 5
@@ -59,5 +66,11 @@ class KeyboardItemCell: UICollectionViewCell, ReusableViewInterface {
         guard let viewModel = model as? KeyboardItemCellViewModel else { return }
         contentImageView.kf.setImage(with: URL(string: viewModel.itemURL ?? ""))
         nameLabel.text = viewModel.itemName
+    }
+    
+    @objc
+    private func copyItem() {
+        UIPasteboard.general.image = contentImageView.image
+        generator.impactOccurred()
     }
 }

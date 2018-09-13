@@ -9,6 +9,10 @@
 import UIKit
 import AlisterSwift
 
+protocol GDKeyboardViewDelegate: class {
+    func didSelectItem(image: UIImage)
+}
+
 class GDKeyboardView: UIView {
     
     private static var collectionViewLayout: UICollectionViewLayout {
@@ -20,6 +24,8 @@ class GDKeyboardView: UIView {
     private let searchFieldView = KeyboardSearchField()
     private let controller: GDKeyboardCollectionController
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+    
+    weak var delegate: GDKeyboardViewDelegate?
     
     init() {
         controller = GDKeyboardCollectionController(collectionView: collectionView)
@@ -46,6 +52,7 @@ class GDKeyboardView: UIView {
         collectionView.snp.makeConstraints {
             $0.top.equalTo(searchFieldView.snp.bottom)
             $0.left.right.bottom.equalToSuperview()
+            $0.height.equalTo(236)
         }
     }
     
