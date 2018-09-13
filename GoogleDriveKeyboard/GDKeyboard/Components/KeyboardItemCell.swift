@@ -46,7 +46,6 @@ class KeyboardItemCell: UICollectionViewCell, ReusableViewInterface {
     private func configureUI() {
         let tapGR = UITapGestureRecognizer(target: self,
                                            action: #selector(copyItem))
-        tapGR.numberOfTapsRequired = 2
         addGestureRecognizer(tapGR)
         
         contentView.addSubview(contentImageView)

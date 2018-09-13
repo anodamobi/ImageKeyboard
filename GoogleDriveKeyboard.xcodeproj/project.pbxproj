@@ -34,6 +34,7 @@
 		D4ACD6A321496E7400489C04 /* GDKeyboardCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */; };
 		D4ED875D214A8A1D002685B3 /* KeyboardColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */; };
 		D4ED875E214A8BC2002685B3 /* KeyboardColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */; };
+		D4ED8760214AA1AB002685B3 /* GoogleDriveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED875F214AA1AB002685B3 /* GoogleDriveService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataGenerator.swift; sourceTree = "<group>"; };
 		D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDKeyboardCollectionController.swift; sourceTree = "<group>"; };
 		D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardColors.swift; sourceTree = "<group>"; };
+		D4ED875F214AA1AB002685B3 /* GoogleDriveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveService.swift; sourceTree = "<group>"; };
 		D6E27CB2D1DCC0516D44B6F7 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81A35FE0499834B8149B02D /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */,
+				D4ED875F214AA1AB002685B3 /* GoogleDriveService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				D4ACD67B21495F0000489C04 /* Resources */,
 				E8C8B7E090ECC3F41FF9053F /* [CP] Embed Pods Frameworks */,
 				D4317B1E214A581A00F274F2 /* Embed App Extensions */,
+				04C4A1E1123AEF451EC48094 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,6 +335,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04C4A1E1123AEF451EC48094 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6BA3217EAD456BCA15EDB787 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +397,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AlisterSwift/AlisterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -382,6 +408,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlisterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -426,6 +456,7 @@
 				D4ACD68121495F0000489C04 /* AppDelegate.swift in Sources */,
 				D4ACD69321495F3900489C04 /* KeyboardPractiveVC.swift in Sources */,
 				D4317B26214A637600F274F2 /* SearchFieldKeyboard.swift in Sources */,
+				D4ED8760214AA1AB002685B3 /* GoogleDriveService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
