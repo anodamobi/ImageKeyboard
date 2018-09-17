@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        GIDSignIn.sharedInstance().clientID = "319311923623-nu3548j4u25os18mo9gijdfhj78ts2gb.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/drive"]
+        
         setupWindow()
         return true
     }
@@ -24,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = KeyboardPracticeVC()
         window?.makeKeyAndVisible()
     }
-
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[.sourceApplication] as? String,
+                                                 annotation: options[.annotation])
+    }
 }
-

@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30B039271A238923A83D13C6 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E27CB2D1DCC0516D44B6F7 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */; };
-		4666E6E422D7DA1F5D64F685 /* Pods_GoogleDriveKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */; };
-		7777A1143790CBF677CDF7D9 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81A35FE0499834B8149B02D /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */; };
+		0F9FFAC578642E4BB105A432 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C652BE38F832FF08BB1E4FCA /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */; };
+		208DB2EDF9A9CE2B881BCC44 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA19D34CCA7058A352EB7A7 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */; };
 		D4317B16214A581A00F274F2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4317B15214A581A00F274F2 /* KeyboardViewController.swift */; };
 		D4317B1A214A581A00F274F2 /* KeyboardViewController.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4317B13214A581A00F274F2 /* KeyboardViewController.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4317B1F214A584100F274F2 /* TestDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */; };
@@ -62,12 +61,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		01CF29044533150C283FA124 /* Pods-GoogleDriveKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboard/Pods-GoogleDriveKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		31F32EFB224C2F3BAAA88527 /* Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-KeyboardViewController/Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.release.xcconfig"; sourceTree = "<group>"; };
 		52BF1581DC02585FFB62852D /* Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.release.xcconfig"; sourceTree = "<group>"; };
-		549F089D2653071A4416750D /* Pods-GoogleDriveKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboard/Pods-GoogleDriveKeyboard.release.xcconfig"; sourceTree = "<group>"; };
 		6274860E17816CECDB93EC65 /* Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-KeyboardViewController/Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		8BA19D34CCA7058A352EB7A7 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E0EB6FD0257BE0A8B3509B /* Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		C652BE38F832FF08BB1E4FCA /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4317B13214A581A00F274F2 /* KeyboardViewController.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeyboardViewController.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4317B15214A581A00F274F2 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D4317B17214A581A00F274F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,9 +86,6 @@
 		D4ACD6A221496E7400489C04 /* GDKeyboardCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDKeyboardCollectionController.swift; sourceTree = "<group>"; };
 		D4ED875C214A8A1D002685B3 /* KeyboardColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardColors.swift; sourceTree = "<group>"; };
 		D4ED875F214AA1AB002685B3 /* GoogleDriveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveService.swift; sourceTree = "<group>"; };
-		D6E27CB2D1DCC0516D44B6F7 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E81A35FE0499834B8149B02D /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7777A1143790CBF677CDF7D9 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework in Frameworks */,
+				208DB2EDF9A9CE2B881BCC44 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4666E6E422D7DA1F5D64F685 /* Pods_GoogleDriveKeyboard.framework in Frameworks */,
-				30B039271A238923A83D13C6 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework in Frameworks */,
+				0F9FFAC578642E4BB105A432 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,9 +111,8 @@
 		0015A8EA25492DA723A97AC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAD50AA5C80407B57E7041D7 /* Pods_GoogleDriveKeyboard.framework */,
-				D6E27CB2D1DCC0516D44B6F7 /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */,
-				E81A35FE0499834B8149B02D /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */,
+				C652BE38F832FF08BB1E4FCA /* Pods_GoogleDriveKeyboardAbstract_GoogleDriveKeyboard.framework */,
+				8BA19D34CCA7058A352EB7A7 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,8 +120,7 @@
 		24D6B91AAF6A7DF27E0C8C15 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				01CF29044533150C283FA124 /* Pods-GoogleDriveKeyboard.debug.xcconfig */,
-				549F089D2653071A4416750D /* Pods-GoogleDriveKeyboard.release.xcconfig */,
+				D4317B14214A581A00F274F2 /* KeyboardViewController */,
 				A2E0EB6FD0257BE0A8B3509B /* Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.debug.xcconfig */,
 				52BF1581DC02585FFB62852D /* Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.release.xcconfig */,
 				6274860E17816CECDB93EC65 /* Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.debug.xcconfig */,
@@ -149,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				D4ACD67F21495F0000489C04 /* GoogleDriveKeyboard */,
-				D4317B14214A581A00F274F2 /* KeyboardViewController */,
 				D4ACD67E21495F0000489C04 /* Products */,
 				24D6B91AAF6A7DF27E0C8C15 /* Pods */,
 				0015A8EA25492DA723A97AC1 /* Frameworks */,
