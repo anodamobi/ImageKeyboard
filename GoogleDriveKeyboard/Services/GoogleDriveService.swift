@@ -19,36 +19,26 @@ class GoogleDriveService {
     
     private let service = GTLRDriveService()
     
-    func getFilesList() {
+    func getFilesList(folderId: String = "") {
         
         let query = GTLRDriveQuery_FilesList.query()
-        query.q = ""//folderId.isEmpty ? "" : "fileId=\(folderId)"
-    
+        query.q = folderId.isEmpty ? "" : "'\(folderId)' IN parents"
         query.pageSize = 100
         
         let ticket: GTLRServiceTicket = service.executeQuery(query) { [unowned self] (tk, data, error) in
             guard let filesList : GTLRDrive_FileList = data as? GTLRDrive_FileList,
                 let filesShow : [GTLRDrive_File] = filesList.files else { return }
 
-            guard let imageKeyboardFolder = filesShow.filter({ file -> Bool in return file.name == "ImageKeyboard" }).first,
-                let folderId = imageKeyboardFolder.identifier
-            else { return }
-            
-            self.getFile(id: folderId)
-        }
-    }
-    
-    private func getFile(id: String) {
-        let query = GTLRDriveQuery_FilesList.query()
-        query.q = "'\(id)' IN parents"
-        
-        let ticket: GTLRServiceTicket = service.executeQuery(query) { [unowned self] (tk, data, error) in
-            guard let filesList : GTLRDrive_FileList = data as? GTLRDrive_FileList,
-                let filesShow : [GTLRDrive_File] = filesList.files else { return }
-            
-            let gifs = filesShow.filter({ file -> Bool in file.mimeType == "image/gif" })
-            
-            debugPrint("GIFs found: \(gifs)")
+            if folderId.isEmpty {
+                guard let imageKeyboardFolder = filesShow.filter({ file -> Bool in return file.name == "ImageKeyboard" }).first,
+                    let folderId = imageKeyboardFolder.identifier
+                else { return }
+                
+                self.getFilesList(folderId: folderId)
+            } else {
+                let gifs = filesShow.filter({ file -> Bool in file.mimeType == "image/gif" })
+                debugPrint("GIFs found: \(gifs)")
+            }
         }
     }
 }
