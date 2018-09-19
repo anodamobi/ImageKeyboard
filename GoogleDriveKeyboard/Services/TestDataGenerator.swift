@@ -29,8 +29,7 @@ class TestDataGenerator {
             let imageURL = images[imageIndex]
             let name = names[nameIndex]
             
-            let model = KeyboardItemCellViewModel(name: name)
-            model.itemURL = imageURL
+            let model = KeyboardItemCellViewModel(name: name, url: imageURL)
             
             result.append(model)
         }

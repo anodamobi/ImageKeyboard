@@ -12,7 +12,7 @@ import SnapKit
 import Kingfisher
 
 class KeyboardItemCellViewModel: ViewModelInterface {
-    var itemURL: String?
+    var itemURL: String
     var itemName: String
     
     var searchEvaluation: SearchEval? {
@@ -22,8 +22,9 @@ class KeyboardItemCellViewModel: ViewModelInterface {
         return searchClosure
     }
     
-    init(name: String) {
+    init(name: String, url: String) {
         self.itemName = name
+        self.itemURL = url
     }
 }
 

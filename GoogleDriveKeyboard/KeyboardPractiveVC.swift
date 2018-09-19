@@ -13,7 +13,6 @@ class KeyboardPracticeVC: UIViewController, GIDSignInUIDelegate {
     
     private let textField = UITextField()
     private let gdkView = GDKeyboardView()
-    private let keyboardView = SearchFieldKeyboard()
     
     override func viewDidLoad() {
         view.backgroundColor = .white

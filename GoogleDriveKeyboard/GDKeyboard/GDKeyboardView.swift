@@ -74,7 +74,8 @@ class GDKeyboardView: UIView {
             $0.register(cell: KeyboardItemCell.self, for: KeyboardItemCellViewModel.self)
         }
         
-        let models = TestDataGenerator.KeyboardItemCellVMs()
+        let urls = AppDataManager.fetchImages()
+        let models = urls.map { KeyboardItemCellViewModel(name: "test", url: $0) }
         
         controller.storage.update {
             $0.add(models)
