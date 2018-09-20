@@ -75,7 +75,7 @@ class GDKeyboardView: UIView {
         }
         
         let urls = AppDataManager.fetchImages()
-        let models = urls.map { KeyboardItemCellViewModel(name: "test", url: $0) }
+        let models = urls.map { KeyboardItemCellViewModel(name: "GIF", url: $0) }
         
         controller.storage.update {
             $0.add(models)

@@ -11,6 +11,9 @@
 		208DB2EDF9A9CE2B881BCC44 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA19D34CCA7058A352EB7A7 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */; };
 		841D23BF21522771000F5F09 /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D23BE21522771000F5F09 /* AppDataManager.swift */; };
 		841D23C021523ADA000F5F09 /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D23BE21522771000F5F09 /* AppDataManager.swift */; };
+		84C6D9A72153BB500091E772 /* GoogleDriveAccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6D9A52153BB500091E772 /* GoogleDriveAccessVC.swift */; };
+		84C6D9A82153BB500091E772 /* GoogleDriveAccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C6D9A62153BB500091E772 /* GoogleDriveAccessVC.xib */; };
+		84C6D9AA2153BF340091E772 /* VendorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6D9A92153BF340091E772 /* VendorService.swift */; };
 		D4317B16214A581A00F274F2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4317B15214A581A00F274F2 /* KeyboardViewController.swift */; };
 		D4317B1A214A581A00F274F2 /* KeyboardViewController.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4317B13214A581A00F274F2 /* KeyboardViewController.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4317B1F214A584100F274F2 /* TestDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */; };
@@ -65,6 +68,9 @@
 /* Begin PBXFileReference section */
 		414C569DD1EF1D32BF2B4071 /* Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		841D23BE21522771000F5F09 /* AppDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataManager.swift; sourceTree = "<group>"; };
+		84C6D9A52153BB500091E772 /* GoogleDriveAccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveAccessVC.swift; sourceTree = "<group>"; };
+		84C6D9A62153BB500091E772 /* GoogleDriveAccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoogleDriveAccessVC.xib; sourceTree = "<group>"; };
+		84C6D9A92153BF340091E772 /* VendorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorService.swift; sourceTree = "<group>"; };
 		869456F776A23EE0C1600F94 /* Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-KeyboardViewController/Pods-GoogleDriveKeyboardAbstract-KeyboardViewController.release.xcconfig"; sourceTree = "<group>"; };
 		8BA19D34CCA7058A352EB7A7 /* Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleDriveKeyboardAbstract_KeyboardViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EF6D27FEF4E277B981AC91 /* Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard/Pods-GoogleDriveKeyboardAbstract-GoogleDriveKeyboard.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		84C6D9A32153BB2A0091E772 /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				84C6D9A42153BB3E0091E772 /* Google Drive */,
+			);
+			path = Access;
+			sourceTree = "<group>";
+		};
+		84C6D9A42153BB3E0091E772 /* Google Drive */ = {
+			isa = PBXGroup;
+			children = (
+				84C6D9A52153BB500091E772 /* GoogleDriveAccessVC.swift */,
+				84C6D9A62153BB500091E772 /* GoogleDriveAccessVC.xib */,
+			);
+			path = "Google Drive";
+			sourceTree = "<group>";
+		};
 		D4317B14214A581A00F274F2 /* KeyboardViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +186,7 @@
 		D4ACD67F21495F0000489C04 /* GoogleDriveKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				84C6D9A32153BB2A0091E772 /* Access */,
 				D4ACD6A42149728300489C04 /* Application */,
 				D4ACD69F21496CC900489C04 /* Services */,
 				D4ACD69C2149649B00489C04 /* Extensions */,
@@ -208,6 +232,7 @@
 				D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */,
 				D4ED875F214AA1AB002685B3 /* GoogleDriveService.swift */,
 				841D23BE21522771000F5F09 /* AppDataManager.swift */,
+				84C6D9A92153BF340091E772 /* VendorService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -325,6 +350,7 @@
 			files = (
 				D4ACD68B21495F0000489C04 /* LaunchScreen.storyboard in Resources */,
 				D4ACD68821495F0000489C04 /* Assets.xcassets in Resources */,
+				84C6D9A82153BB500091E772 /* GoogleDriveAccessVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +424,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
@@ -409,6 +436,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -446,6 +474,7 @@
 				D4ED875D214A8A1D002685B3 /* KeyboardColors.swift in Sources */,
 				D4ACD69621495F7C00489C04 /* GDKeyboardView.swift in Sources */,
 				D4ACD698214960C300489C04 /* KeyboardItemCell.swift in Sources */,
+				84C6D9A72153BB500091E772 /* GoogleDriveAccessVC.swift in Sources */,
 				D4ACD6A321496E7400489C04 /* GDKeyboardCollectionController.swift in Sources */,
 				D4ACD6A121496CD300489C04 /* TestDataGenerator.swift in Sources */,
 				D4317B28214A747900F274F2 /* ColorTheme+Ext.swift in Sources */,
@@ -453,6 +482,7 @@
 				D4ACD69E214964A600489C04 /* UIColor+Ext.swift in Sources */,
 				D4ACD68121495F0000489C04 /* AppDelegate.swift in Sources */,
 				D4ACD69321495F3900489C04 /* KeyboardPractiveVC.swift in Sources */,
+				84C6D9AA2153BF340091E772 /* VendorService.swift in Sources */,
 				D4317B26214A637600F274F2 /* SearchFieldKeyboard.swift in Sources */,
 				D4ED8760214AA1AB002685B3 /* GoogleDriveService.swift in Sources */,
 			);
@@ -487,11 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = KeyboardViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard.KeyboardViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -507,11 +533,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = KeyboardViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard.KeyboardViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -643,10 +665,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = GoogleDriveKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -663,10 +682,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = GoogleDriveKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

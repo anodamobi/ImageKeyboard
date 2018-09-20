@@ -19,7 +19,7 @@ class GoogleDriveService {
     
     private let service = GTLRDriveService()
     
-    func getFilesList(folderId: String = "") {
+    func getFilesList(folderId: String = "", _ completion: @escaping ((Error?) -> Void)) {
         
         let query = GTLRDriveQuery_FilesList.query()
         query.q = folderId.isEmpty ? "" : "'\(folderId)' IN parents and mimeType = 'image/gif'"
@@ -27,20 +27,21 @@ class GoogleDriveService {
 
         query.pageSize = 100
         
-        let ticket: GTLRServiceTicket = service.executeQuery(query) { [unowned self] (tk, data, error) in
+        _ = service.executeQuery(query) { [unowned self] (tk, data, error) in
             guard let filesList : GTLRDrive_FileList = data as? GTLRDrive_FileList,
-                let filesShow : [GTLRDrive_File] = filesList.files else { return }
+                let filesShow : [GTLRDrive_File] = filesList.files else { completion(error); return }
 
             if folderId.isEmpty {
                 guard let imageKeyboardFolder = filesShow.filter({ file -> Bool in return file.name == "ImageKeyboard" }).first,
                     let folderId = imageKeyboardFolder.identifier
-                else { return }
+                else { completion(error); return }
                 
-                self.getFilesList(folderId: folderId)
+                self.getFilesList(folderId: folderId, completion)
             } else {
                 debugPrint("GIFs found: \(filesShow)")
                 let urls = filesShow.compactMap { return $0.webContentLink }
                 AppDataManager.saveImages(urls: urls)
+                completion(nil)
             }
         }
     }

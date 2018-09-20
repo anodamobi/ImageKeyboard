@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoogleDriveAccessVC" customModule="GoogleDriveKeyboard" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Create folder named &quot;ImageKeyboard&quot; in your Drive root folder." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvB-pw-YOt">
+                    <rect key="frame" x="8" y="80" width="359" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Give keyboard access to you Drive by clicking the button below." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbV-Pu-AOF">
+                    <rect key="frame" x="8" y="141" width="359" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. All .gif images will be automatically fetched and be able to use with the keyboard." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N6-c7-AMO">
+                    <rect key="frame" x="8" y="202" width="359" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-ea-UMk">
+                    <rect key="frame" x="138" y="313" width="98" height="30"/>
+                    <state key="normal" title="Connect Drive"/>
+                    <connections>
+                        <action selector="connectGoogleDrive:" destination="-1" eventType="touchUpInside" id="5Cr-oD-Z7V"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2N6-c7-AMO" secondAttribute="trailing" constant="8" id="0AZ-9w-fMy"/>
+                <constraint firstAttribute="trailing" secondItem="HvB-pw-YOt" secondAttribute="trailing" constant="8" id="5VN-KG-m7W"/>
+                <constraint firstItem="2N6-c7-AMO" firstAttribute="top" secondItem="mbV-Pu-AOF" secondAttribute="bottom" constant="20" id="76e-Zc-6MD"/>
+                <constraint firstItem="HvB-pw-YOt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Byi-gy-fqM"/>
+                <constraint firstItem="HvB-pw-YOt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="EeK-32-GcD"/>
+                <constraint firstItem="2N6-c7-AMO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="MNv-Ru-JXb"/>
+                <constraint firstItem="mbV-Pu-AOF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="ODr-ry-XiP"/>
+                <constraint firstItem="Bca-ea-UMk" firstAttribute="top" secondItem="2N6-c7-AMO" secondAttribute="bottom" constant="70" id="abg-fW-wOR"/>
+                <constraint firstItem="mbV-Pu-AOF" firstAttribute="top" secondItem="HvB-pw-YOt" secondAttribute="bottom" constant="20" id="ccg-lT-cQ6"/>
+                <constraint firstItem="Bca-ea-UMk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mII-tU-Wbv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mbV-Pu-AOF" secondAttribute="trailing" constant="8" id="uA5-kr-rFV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

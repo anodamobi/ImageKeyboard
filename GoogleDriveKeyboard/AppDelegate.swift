@@ -15,17 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        GIDSignIn.sharedInstance().clientID = "319311923623-nu3548j4u25os18mo9gijdfhj78ts2gb.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/drive"]
-        
+        VendorService.start()
         setupWindow()
         return true
     }
 
     private func setupWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = KeyboardPracticeVC()
+        
+        let rootVC = GIDSignIn.sharedInstance().hasAuthInKeychain() ? KeyboardPracticeVC() : GoogleDriveAccessVC()
+        
+        window?.rootViewController = UINavigationController(rootViewController: rootVC)
         window?.makeKeyAndVisible()
     }
     

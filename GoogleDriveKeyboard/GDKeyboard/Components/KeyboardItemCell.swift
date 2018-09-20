@@ -64,7 +64,7 @@ class KeyboardItemCell: UICollectionViewCell, ReusableViewInterface {
     
     func update(_ model: ViewModelInterface) {
         guard let viewModel = model as? KeyboardItemCellViewModel else { return }
-        contentImageView.kf.setImage(with: URL(string: viewModel.itemURL ?? ""))
+        contentImageView.kf.setImage(with: URL(string: viewModel.itemURL), placeholder: #imageLiteral(resourceName: "default-img-placeholder"))
         nameLabel.text = viewModel.itemName
     }
     
@@ -72,5 +72,12 @@ class KeyboardItemCell: UICollectionViewCell, ReusableViewInterface {
     private func copyItem() {
         UIPasteboard.general.image = contentImageView.image
         generator.impactOccurred()
+        
+        let itemName = nameLabel.text
+        nameLabel.text = "Copied!"
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.nameLabel.text = itemName
+        }
     }
 }

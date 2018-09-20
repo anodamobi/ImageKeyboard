@@ -9,9 +9,10 @@
 import UIKit
 import GoogleSignIn
 
-class KeyboardPracticeVC: UIViewController, GIDSignInUIDelegate {
+class KeyboardPracticeVC: UIViewController {
     
     private let textField = UITextField()
+    private let titleLabel = UILabel()
     private let gdkView = GDKeyboardView()
     
     override func viewDidLoad() {
@@ -26,35 +27,25 @@ class KeyboardPracticeVC: UIViewController, GIDSignInUIDelegate {
             $0.width.equalTo(200)
         }
         
+        view.addSubview(titleLabel)
+        titleLabel.text = "Now try your new keyboard:"
+        titleLabel.numberOfLines = 2
+        titleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(textField.snp.top).offset(-20)
+        }
+        
         gdkView.updateColorScheme(scheme: .light)
         let container = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 290))
         container.addSubview(gdkView)
         gdkView.snp.makeConstraints { $0.edges.equalToSuperview() }
         gdkView.delegate = self
         textField.inputView = container
-        
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().signIn()
     }
 }
 
 extension KeyboardPracticeVC: GDKeyboardViewDelegate {
     func didSelectItem(image: UIImage) {
-        
-    }
-}
-
-extension KeyboardPracticeVC: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print("\(error.localizedDescription)")
-        } else {
-            GoogleDriveService.shared.getFilesList()
-        }
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        debugPrint("Disconnected")
+        // TODO: (alex) call delegate method
     }
 }

@@ -11,6 +11,7 @@ abstract_target 'GoogleDriveKeyboardAbstract' do
         pod 'Reveal-SDK'
         pod 'GoogleAPIClientForREST/Drive'
         pod 'GoogleSignIn'
+        pod 'MBProgressHUD'
     end
     
     target 'KeyboardViewController' do
