@@ -70,11 +70,11 @@ class KeyboardItemCell: UICollectionViewCell, ReusableViewInterface {
     
     @objc
     private func copyItem() {
-        UIPasteboard.general.image = contentImageView.image
-        generator.impactOccurred()
-        
         let itemName = nameLabel.text
         nameLabel.text = "Copied!"
+        
+        UIPasteboard.general.image = contentImageView.image
+        generator.impactOccurred()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             self?.nameLabel.text = itemName

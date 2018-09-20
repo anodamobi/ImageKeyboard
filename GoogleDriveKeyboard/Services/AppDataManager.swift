@@ -11,7 +11,7 @@ import Foundation
 class AppDataManager {
     
     private static let imagesKey = "image-keyboard-saved-images"
-    private static let defaults = UserDefaults.standard
+    private static let defaults = UserDefaults(suiteName: "group.imagekeyboard")!
     
     static func saveImages(urls: [String]) {
         if var imagesSet = getImages() {

@@ -14,6 +14,7 @@
 		84C6D9A72153BB500091E772 /* GoogleDriveAccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6D9A52153BB500091E772 /* GoogleDriveAccessVC.swift */; };
 		84C6D9A82153BB500091E772 /* GoogleDriveAccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C6D9A62153BB500091E772 /* GoogleDriveAccessVC.xib */; };
 		84C6D9AA2153BF340091E772 /* VendorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6D9A92153BF340091E772 /* VendorService.swift */; };
+		84C6D9AE2153E30D0091E772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ACD68721495F0000489C04 /* Assets.xcassets */; };
 		D4317B16214A581A00F274F2 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4317B15214A581A00F274F2 /* KeyboardViewController.swift */; };
 		D4317B1A214A581A00F274F2 /* KeyboardViewController.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4317B13214A581A00F274F2 /* KeyboardViewController.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4317B1F214A584100F274F2 /* TestDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACD6A021496CD300489C04 /* TestDataGenerator.swift */; };
@@ -341,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C6D9AE2153E30D0091E772 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +519,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = KeyboardViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard.KeyboardViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -533,7 +539,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = KeyboardViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard.KeyboardViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -665,7 +675,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = GoogleDriveKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -682,7 +695,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYW9J77NX;
 				INFOPLIST_FILE = GoogleDriveKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ANODA.GoogleDriveKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
